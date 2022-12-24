@@ -220,7 +220,6 @@ nav{
     display: flex;
     /* justify-content: space-between; */
     margin-top: 3rem;
-    font-size: 15px;
     gap: 4%;
 }
 
@@ -266,6 +265,47 @@ nav{
     color: hsl(228, 45%, 44%); 
 }
 
+/* ===========TABLET RESPONSIVE SETTINGS======== */
+@media screen and (max-width: 64rem){
+    /* styling the nav elements */
+    .logo{
+        width: 40%;
+    }
+
+    .visible-nav{
+        width: 60%;
+    }
+
+    /* styling the top page elements */
+    .main-container{
+        gap: 2%;
+        grid-template-columns: 60% 38%;
+    }
+
+    .left_bottom{
+        grid-template-columns: 44% 52%;
+        gap: 4%;
+    }
+
+    .left-bottom_left{
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    .left-bottom_right{
+        line-height: 17px;
+    }
+
+    .left-bottom_right > button{
+        height: 2rem;
+        font-size: 12px;
+    }
+
+    .body-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /* ===========MOBILE RESPONSIVE SETTINGS========= */
 @media screen and (max-width: 37.5rem){
@@ -315,6 +355,7 @@ nav{
         display: block;
     }
 
+    /* styling the mobile top body element */
     .main-container{
         grid-template-columns: 1fr;
         gap: 6%;
@@ -342,6 +383,7 @@ nav{
         height: 70vh;
     }
 
+    /* styling the mobile bottom body element */
     .body-bottom{
         flex-direction: column;
         margin-top: 8rem;
