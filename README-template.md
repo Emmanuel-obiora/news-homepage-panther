@@ -11,14 +11,11 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+
+This project involve the development of a news homepage that showcase the use of elements such as, div, flex, grid and many more in order to give a beautiful rendation on how a news home page should look like.
 
 ### The challenge
 
@@ -31,16 +28,28 @@ Users should be able to:
 
 ![Desktop](./assets/screeshots/desktop.png)
 
-![Mobile](./assets/screeshots/mobile.png)
+![Tablet](./assets/screeshots/Tablet.png)
 
 ![Open-Nav](./assets/screeshots/open%20nav.png)
 
 ### Links
 
-- Solution URL: [Github Repository](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repository](https://github.com/Emmanuel-obiora/news-homepage-panther)
+- Live Site URL: [news-homepage-panther](https://emmanuel-obiora.github.io/news-homepage-panther/)
 
 ## My process
+
+1. First I created a repository on Github and then cloned it on my local machine.
+
+2. I read and studied the challenge guidlines in terms of style-guide, font, assets provided, design flow.
+
+3. After which I analyzed my code structure in my head, before creating the HTML code template step by step. Each line of code written was styled immediately to avoid unforseen bugs.
+
+4. After achieving the Desktop design, I went on to effectively add the responsiveness for both tablet and mobile. All it required was a little twick to the css properties of some HTML elements.
+
+5. For mobile device, the origin navigation menu was restyled to suit the device as such a littile bit of JavaScript was required to call up the hidden navigation menu.
+
+6. Furthermore, I went over the code to check for bugs using live-server. With no bug on sight I published the completed design using Github pages.
 
 ### Built with
 
@@ -52,51 +61,45 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+I have been prohramming for some months now, so the challenge looked a little too simple, but I became familiar with the inter google font template.
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
+  <div class="toggle" onclick="openModal()">
+    <img src="./assets/images/icon-menu.svg" alt="Open Navigation">
+  </div>
 ```
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+::-webkit-scrollbar{
+    width: 1em;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--color-bg);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-grey);
+    border-radius: 15px;
+    border: 5px solid var(--color-bg);
 }
 ```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function openModal(){
+    const open = document.getElementById('modalLock');
+    const navs = document.getElementById('hideNav');
+
+    open.classList.add('open-modal');
+    navs.classList.add('show-nav');
+
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Obiora Emmanuel](https://emmanuel-obiora.github.io/portfolio-about-me-/web-content/)
+- Frontend Mentor - [@Emmanuel-obiora](https://www.frontendmentor.io/profile/Emmanuel-obiora)
+- Twitter - [@Miroclesdgenius](https://twitter.com/Miroclesdgenius)
