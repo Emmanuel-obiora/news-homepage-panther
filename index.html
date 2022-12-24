@@ -8,6 +8,12 @@
   
   <title>Frontend Mentor | News homepage</title>
 
+  <!-- Google cdn for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" 
+  />
+  
   <!-- Linking an external style sheet -->
   <link href="./style.css" rel="stylesheet">
 
@@ -15,19 +21,23 @@
 <body>
 
   <div class="body__container">
+    <div class="modal" id="modalLock" onclick="closeModal()"></div>
     <nav>
       <div class="logo">
         <img src="./assets/images/logo.svg" alt="Logo">
       </div>
-      <ul>
-        <li><a href="#" title="Home">Home</a></li>
-        <li><a href="#" title="New">New</a></li>
-        <li><a href="#" title="Popular">Popular</a></li>
-        <li><a href="#" title="Trending">Trending</a></li>
-        <li><a href="#" title="Categories">Categories</a></li>
-      </ul>
-      <div class="toggle">
-        <span class="bars"></span>
+      <div class="visible-nav" id="hideNav">
+        <img src="./assets/images/icon-menu-close.svg" class="close" alt="Exit" onclick="closeModal()">
+        <ul>
+          <li><a href="#" title="Home">Home</a></li>
+          <li><a href="#" title="New">New</a></li>
+          <li><a href="#" title="Popular">Popular</a></li>
+          <li><a href="#" title="Trending">Trending</a></li>
+          <li><a href="#" title="Categories">Categories</a></li>
+        </ul>
+      </div>
+      <div class="toggle" onclick="openModal()">
+        <img src="./assets/images/icon-menu.svg" alt="Open Navigation">
       </div>
     </nav>
 
@@ -94,6 +104,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://emmanuel-obiora.github.io/portfolio-about-me-/web-content/" rel="noopener">Obiora Emmanuel</a>.
   </div>
-  
+
+
+  <script src="./script.js"></script>
 </body>
 </html>

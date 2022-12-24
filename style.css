@@ -32,21 +32,24 @@ a{
 
 ::-webkit-scrollbar{
     width: 1em;
-    border: .5em solid var(--color-bg);
 }
 
 ::-webkit-scrollbar-track{
-    background-color: var(--color-bg2);
+    background-color: var(--color-bg);
     border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover{
+    background-color: var(--color-bg2);
 }
 
 ::-webkit-scrollbar-thumb{
     background-color: var(--color-grey);
     border-radius: 15px;
-    border: 4px solid var(--color-bg2);
+    border: 5px solid var(--color-bg);
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--color-yellow);
+    border: 5px solid var(--color-bg2);
 }
 
 @supports(scrollbar-color: var(--color-bg2)){
@@ -61,17 +64,31 @@ a{
 .body__container{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        /* align-items: center; */
+        /* justify-content: center; */
         width: 100%;
         height: 100%;
+}
+
+/* styling the modal class */
+.modal{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 2;
 }
 
 /* ==========STYLING THE NAVIGATION BAR ELEMENTS============== */
 nav{
     display: flex;
     width: 100%;
-    /* align-items: center; */
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -79,41 +96,35 @@ nav{
     width: 60%;
 }
 
-nav ul{
+.visible-nav{
+    width: 40%;
+    top: 0;
+}
+.visible-nav ul{
     display: flex;
     align-items: center;
-    width: 40%;
     justify-content: space-between;
 }
 
-nav ul li>a:hover{
+.visible-nav ul li>a:hover{
+    color: var(--color-red);
+}
+
+.close{
+    display: none;
+    padding: 1rem;
+    margin-left: 11rem;
+    cursor: pointer;
+}
+
+.close:hover{
     color: var(--color-red);
 }
 
 .toggle{
     cursor: pointer;
-  }
-  .bars{
-    background: #999;
     display: none;
-    height: 2px;
-    position: relative;
-    width: 4vw;
-  }
-  .bars::before,.bars::after{
-    background: #999;
-    content: "";
-    display: inline-block;
-    height: 2px;
-    position: absolute;
-    width: 4vw;
-  }
-  .bars::before{
-    top:5px;
-  }
-  .bars::after{
-    bottom: 5px;
-  }
+}
 
 /* ==========STYLING THE TOP PAGE ELEMENT===================== */
 .main-container{
@@ -218,15 +229,15 @@ nav ul li>a:hover{
 }
 
 .foot-item > img{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 120px;
 }
 
 .foot-item_details{
     display: flex;
     flex-direction: column;
     gap: 5%;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     color: var(--color-grey);
 }
 
@@ -252,4 +263,96 @@ nav ul li>a:hover{
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+
+/* ===========MOBILE RESPONSIVE SETTINGS========= */
+@media screen and (max-width: 37.5rem){
+
+    /* styling the mobile nav menu */
+    body{
+        padding: 1rem;
+    }
+
+    a{
+        color: black;
+    }
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    @supports(scrollbar-width: none){
+        *{
+            scrollbar-width: none;
+        }
+    }
+
+    .visible-nav{
+        display: none;
+        position: fixed;
+        background: var(--color-bg);
+        height: 100%;
+        width: 65%;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+    }
+
+    .visible-nav ul{
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items:flex-start;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .close{
+        display: flex;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    .main-container{
+        grid-template-columns: 1fr;
+        gap: 8%;
+    }
+
+    .main-container_left > span{
+        background-image: url(./assets/images/image-web-3-mobile.jpg);
+    }
+
+    .left_bottom{
+        grid-template-columns: 1fr;
+        gap: 5%;
+    }
+
+    .left-bottom_left{
+        width: 80%;
+        font-size: 35px;
+    }
+
+    .left-bottom_right > button{
+        margin-top: 1.5rem;
+    }
+
+    .main-container_right{
+        height: 70vh;
+    }
+
+    .body-bottom{
+        flex-direction: column;
+        margin-top: 8rem;
+        gap: 2rem;
+    }
+}
+
+/* ==== TO DISPLAY HIDDEN ELEMENTS===== */
+.open-modal{
+    display: block;
+}
+
+.show-nav{
+    display: block;
 }
