@@ -11,19 +11,19 @@
 }
 
 :root{
-    --color-bg: #ffff;
-    --color-bg-varient: rgba(255, 255, 255, .8);
-    --btn-background: rgba(0, 0, 0, .5);
-    --color-red: #fa4f4f;
-    --color-yellow: rgb(226, 153, 17);
-    --color-bg2: rgb(6, 5, 54);
-    --color-grey: rgb(173, 169, 169);
+    --color-bg: hsl(36, 100%, 99%);
+    --btn-background: hsl(236, 13%, 42%);
+    --color-red: hsl(5, 85%, 63%);
+    --color-yellow: hsl(35, 77%, 62%);
+    --color-bg2: hsl(240, 100%, 5%);
+    --color-grey: hsl(233, 8%, 79%);
 }
 
 body{
     padding: 4rem 6rem;
     background: var(--color-bg);
     font-family: 'Inter', sans-serif;
+    Font-size: 15px;
 }
 
 a{
@@ -113,12 +113,13 @@ nav{
 .close{
     display: none;
     padding: 1rem;
-    margin-left: 11rem;
-    cursor: pointer;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.close:hover{
-    color: var(--color-red);
+.close > img{
+    cursor: pointer;
+
 }
 
 .toggle{
@@ -211,7 +212,7 @@ nav{
 
 .para > p{
     font-size: 14px;
-    color: var(--color-bg-varient);
+    color: var(--color-grey);
 }
 
 /* ============STYLING THE BOTTOM PAAGE ELEMENT============ */
@@ -316,7 +317,7 @@ nav{
 
     .main-container{
         grid-template-columns: 1fr;
-        gap: 8%;
+        gap: 6%;
     }
 
     .main-container_left > span{
