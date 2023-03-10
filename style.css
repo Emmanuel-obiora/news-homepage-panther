@@ -203,12 +203,12 @@ main{
     font-size: 38px;
 }
 
-.para > h3{
+.para > h2{
     margin-bottom: .5rem;
     cursor: pointer;
 }
 
-.para > h3:hover{
+.para > h2:hover{
     color: var(--color-yellow);
 }
 
@@ -243,13 +243,13 @@ main{
     color: var(--color-grey);
 }
 
-.foot-item_details >h4{
+.foot-item_details >h2{
     font-size: 17px;
     font-weight: 700;
     color: black;
     cursor: pointer;
 }
-.foot-item_details >h4:hover{
+.foot-item_details >h2:hover{
     color: var(--color-red);
 }
 
