@@ -198,17 +198,17 @@ main{
     padding: 2rem 1rem;
 }
 
-.main-container_right > h1{
+.main-container_right > h2{
     color: var(--color-yellow);
     font-size: 38px;
 }
 
-.para > h2{
+.para > h3{
     margin-bottom: .5rem;
     cursor: pointer;
 }
 
-.para > h2:hover{
+.para > h3:hover{
     color: var(--color-yellow);
 }
 
@@ -243,13 +243,13 @@ main{
     color: var(--color-grey);
 }
 
-.foot-item_details >h2{
+.foot-item_details >h3{
     font-size: 17px;
     font-weight: 700;
     color: black;
     cursor: pointer;
 }
-.foot-item_details >h2:hover{
+.foot-item_details >h3:hover{
     color: var(--color-red);
 }
 
